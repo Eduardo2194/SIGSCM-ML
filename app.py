@@ -31,11 +31,10 @@ class Post(BaseModel):
     published: Optional[bool] = False
 
 
-@app.post('/sigmcs-mlsecuence')
-def save_post(post: ReqMl):
-    posts.append(post.dict())
+@app.get('/sigmcs-mlsecuence')
+async def read_item(fecha_ini: str = "20-20-2020", fecha_fin: str = "20-20-2020"):
     return {"day1": random.randint(10,30), "day2": random.randint(10,30), "day3": random.randint(10,30), "day4": random.randint(10,30), "day5": random.randint(10,30), "day6": random.randint(10,30), "day7": random.randint(10,30)  }
-
+raise HTTPException(status_code=404, detail="Item not found")
 """
 @app.get('/')
 def read_root():
