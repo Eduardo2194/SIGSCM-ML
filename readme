@@ -1,0 +1,5 @@
+Instalar dependencias: pip install -r requirements.txt
+----------
+Iniciar:
+linux: uvicorn main:app --reload
+window: python -m uvicorn main:app --reload
