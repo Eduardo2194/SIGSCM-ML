@@ -6,7 +6,7 @@ from typing import List
 router = APIRouter()
 
 
-@router.post("/test", tags=["test"])
+@router.get("/test", tags=["test"])
 async def test(start:str,end:str):
 #async def test(file: UploadFile,start:str,end:str):
     date_format = "%Y-%m-%d"
